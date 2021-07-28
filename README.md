@@ -1,2 +1,2 @@
 # GMS2CommonSystem
-GMS2 公用系统
+GMS2 通用系统

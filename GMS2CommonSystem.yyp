@@ -1,14 +1,20 @@
 {
   "resources": [
+    {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},"order":0,},
+    {"id":{"name":"objCamera相机功能","path":"notes/objCamera相机功能/objCamera相机功能.yy",},"order":2,},
     {"id":{"name":"scrMsgUnregister","path":"scripts/scrMsgUnregister/scrMsgUnregister.yy",},"order":2,},
     {"id":{"name":"objInit","path":"objects/objInit/objInit.yy",},"order":3,},
     {"id":{"name":"objMsgController","path":"objects/objMsgController/objMsgController.yy",},"order":0,},
     {"id":{"name":"scrMsgSend","path":"scripts/scrMsgSend/scrMsgSend.yy",},"order":3,},
+    {"id":{"name":"objTestMsg2","path":"objects/objTestMsg2/objTestMsg2.yy",},"order":1,},
+    {"id":{"name":"objTestMsg1","path":"objects/objTestMsg1/objTestMsg1.yy",},"order":0,},
     {"id":{"name":"scrMsg","path":"scripts/scrMsg/scrMsg.yy",},"order":0,},
+    {"id":{"name":"todo","path":"notes/todo/todo.yy",},"order":3,},
     {"id":{"name":"scrMsgClearInvalidTopic","path":"scripts/scrMsgClearInvalidTopic/scrMsgClearInvalidTopic.yy",},"order":4,},
     {"id":{"name":"scrMsgRegister","path":"scripts/scrMsgRegister/scrMsgRegister.yy",},"order":1,},
-    {"id":{"name":"initRoom","path":"rooms/initRoom/initRoom.yy",},"order":0,},
+    {"id":{"name":"roInit","path":"rooms/roInit/roInit.yy",},"order":0,},
     {"id":{"name":"代码风格规范","path":"notes/代码风格规范/代码风格规范.yy",},"order":1,},
+    {"id":{"name":"roMsg","path":"rooms/roMsg/roMsg.yy",},"order":0,},
     {"id":{"name":"命名规范","path":"notes/命名规范/命名规范.yy",},"order":0,},
   ],
   "Options": [
@@ -25,7 +31,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"initRoom","path":"rooms/initRoom/initRoom.yy",},},
+    {"roomId":{"name":"roInit","path":"rooms/roInit/roInit.yy",},},
+    {"roomId":{"name":"roMsg","path":"rooms/roMsg/roMsg.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -45,6 +52,9 @@
     {"folderPath":"folders/Scripts/Msg.yy","order":1,"resourceVersion":"1.0","name":"Msg","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Msg.yy","order":1,"resourceVersion":"1.0","name":"Msg","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Test.yy","order":2,"resourceVersion":"1.0","name":"Test","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Camera.yy","order":4,"resourceVersion":"1.0","name":"Camera","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Test/Msg.yy","order":1,"resourceVersion":"1.0","name":"Msg","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Rooms/Test.yy","order":1,"resourceVersion":"1.0","name":"Test","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

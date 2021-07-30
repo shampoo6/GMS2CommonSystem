@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description first room for init game
 
 // 初始化全局对象
 instance_create_layer(0, 0, "Instances", objMsgController);

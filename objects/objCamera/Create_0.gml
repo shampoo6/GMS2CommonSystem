@@ -1,72 +1,49 @@
 /// @description init camera
 // 使用前请销毁默认相机 camera_destroy(camera_get_default());
 
-#region 初始化相机属性
+#region 属性
 
-// 是否忽略边界，忽略边界的话相机可以移动到边界外
+// index	相机 view_camera 的索引
+// target	跟踪对象
+// bound	边界对象
+// w			相机试图宽度(单位: tile宽)
+// h			相机试图宽度(单位: tile高)
+
+// 用于控制 step 中的逻辑是否运行
+enable = true;
+
+needUpdateView = false;
+needUpdateProj = false;
+
+// 忽略边框
 ignoreBound = false;
+// 视图大小
+viewW = w * global.cameraConfig.tileW;
+viewH = h * global.cameraConfig.tileH;
+// 相机正上方向量
+cameraUpX = 0;
+cameraUpY = 1;
 
-// 相机旋转
-cam_rot = 0;
-// 相机上方向向量x
-cam_up_x = 0;
-// 相机上方向向量y
-cam_up_y = 1;
-// 相机缩放
-cam_zoom = 1;
-
-viewWidth = tileWidth * blocksWidth;
-viewHeight = tileHeight * blocksHeight;
-
-halfWidth = viewWidth * 0.5;
-halfHeight = viewHeight * 0.5;
-
-x = halfWidth;
-y = halfHeight;
+x = 0;
+y = 0;
 z = -100;
 
 #endregion
 
-#region 设置相机
+#region 初始化
 
 camera = camera_create();
+view_camera[index] = camera;
 
-var proj_mat = matrix_build_projection_ortho(viewWidth, viewHeight, 1, 10000);
-camera_set_proj_mat(camera, proj_mat);
+var projMat = matrix_build_projection_ortho(viewW, viewH, 1, 10000);
+camera_set_proj_mat(camera, projMat);
+var viewMat = matrix_build_lookat(x, y, z, x, y, 0, cameraUpX, cameraUpY, 0);
+camera_set_view_mat(camera, viewMat);
 
-var view_mat = matrix_build_lookat(x, y, z, x, y, 0, cam_up_x, cam_up_y, 0);
-camera_set_view_mat(camera, view_mat);
-
-view_camera[camera_index] = camera;
-
-must_update_view = false;
-must_update_proj = false;
+view_enabled = true;
+view_visible[index] = true;
 
 #endregion
 
-#region 抖动属性
-
-shake_amount = 0;
-shake_duration = 0;
-
-position_offset_x = 0;
-position_offset_y = 0;
-
-#endregion
-
-#region 定义move移动属性
-
-//deadzone = 5; 现在deadzone成为了可配置项
-expectX = 0;
-expectY = 0;
-moving = false;
-moveSpeed = 0;
-
-#endregion
-
-#region 定义lerp移动属性
-
-lerping = false;
-lerpRate = 1;
-
-#endregion
+show_debug_message(index);
+show_debug_message(target);

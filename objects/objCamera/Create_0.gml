@@ -3,11 +3,12 @@
 
 #region 属性
 
-// index	相机 view_camera 的索引
-// target	跟踪对象
-// bound	边界对象
-// w			相机试图宽度(单位: tile宽)
-// h			相机试图宽度(单位: tile高)
+// index			相机 view_camera 的索引
+// viewBound	视图边界对象
+// target			跟踪对象
+// bound			边界对象
+// w					相机试图宽度(单位: tile宽)
+// h					相机试图宽度(单位: tile高)
 
 // 用于控制 step 中的逻辑是否运行
 enable = true;
@@ -44,6 +45,3 @@ view_enabled = true;
 view_visible[index] = true;
 
 #endregion
-
-show_debug_message(index);
-show_debug_message(target);

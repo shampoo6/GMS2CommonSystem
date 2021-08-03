@@ -21,7 +21,6 @@
     {"id":{"name":"scrMsgRegister","path":"scripts/scrMsgRegister/scrMsgRegister.yy",},"order":1,},
     {"id":{"name":"roInit","path":"rooms/roInit/roInit.yy",},"order":0,},
     {"id":{"name":"scrConfigLayer","path":"scripts/scrConfigLayer/scrConfigLayer.yy",},"order":0,},
-    {"id":{"name":"objCameraViewBound","path":"objects/objCameraViewBound/objCameraViewBound.yy",},"order":1,},
     {"id":{"name":"代码风格规范","path":"notes/代码风格规范/代码风格规范.yy",},"order":1,},
     {"id":{"name":"roMsg","path":"rooms/roMsg/roMsg.yy",},"order":0,},
     {"id":{"name":"objTestMoveOne","path":"objects/objTestMoveOne/objTestMoveOne.yy",},"order":2,},

@@ -21,6 +21,8 @@ ignoreBound = false;
 // 视图大小
 viewW = w * global.cameraConfig.tileW;
 viewH = h * global.cameraConfig.tileH;
+halfW = viewW * 0.5;
+halfH = viewH * 0.5;
 // 相机正上方向量
 cameraUpX = 0;
 cameraUpY = 1;

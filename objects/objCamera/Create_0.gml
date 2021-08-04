@@ -3,15 +3,15 @@
 
 #region 属性
 
-// index			相机 view_camera 的索引
-// viewBound	视图边界对象
+// enabled			用于控制 step 中的逻辑是否运行
+// autoDisable	是否自动关闭相机 enabled
+// index				相机 view_camera 的索引
+// viewBound		视图边界对象
 // target			跟踪对象
 // bound			边界对象
 // w					相机试图宽度(单位: tile宽)
 // h					相机试图宽度(单位: tile高)
-
-// 用于控制 step 中的逻辑是否运行
-enable = true;
+// moveSpeed	相机移动速度 若值为-1则即时跟随
 
 needUpdateView = false;
 needUpdateProj = false;

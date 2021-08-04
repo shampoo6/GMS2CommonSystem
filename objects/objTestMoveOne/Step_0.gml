@@ -1,16 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (keyboard_check(ord(up))) {
-	y -= moveSpeed * delta_time * 0.000001
+// 输入检测并移动
+if (objInput.up) {
+	scrCollisionMoveY(-frameSpeed, [objCollisionWall]);
+	faceY = -1;
 }
-if (keyboard_check(ord(down))) {
-	y += moveSpeed * delta_time * 0.000001
+if (objInput.down) {
+	scrCollisionMoveY(frameSpeed, [objCollisionWall]);
+	faceY = 1;
 }
-if (keyboard_check(ord(left))) {
-	x -= moveSpeed * delta_time * 0.000001
+if (objInput.left) {
+	scrCollisionMoveX(-frameSpeed, [objCollisionWall]);
+	faceX = -1;
 }
-if (keyboard_check(ord(right))) {
-	x += moveSpeed * delta_time * 0.000001
+if (objInput.right) {
+	scrCollisionMoveX(frameSpeed, [objCollisionWall])
+	faceX = 1;
 }
-//show_debug_message(string(x)+":"+string(y));
+
+// 调整朝向
+if (objInput.up || objInput.down) {
+	if (!objInput.left && !objInput.right) faceX = 0;
+} else if (objInput.left || objInput.right) {
+	if (!objInput.up && !objInput.down) faceY = 0;
+}
+
+// 手动开启相机
+if (objInput.up || objInput.down || objInput.left || objInput.right)
+	objCamera.enabled = true;

@@ -3,10 +3,10 @@
   "isCompatibility": false,
   "parent": {
     "name": "Camera",
-    "path": "folders/Scripts/Config/Camera.yy",
+    "path": "folders/Scripts/Camera.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scrConfigCamera",
+  "name": "scrCameraMove",
   "tags": [],
   "resourceType": "GMScript",
 }

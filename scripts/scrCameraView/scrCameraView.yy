@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Constant",
-    "path": "folders/Scripts/Constant.yy",
+    "name": "Camera",
+    "path": "folders/Scripts/Camera.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scrConstantMacros",
+  "name": "scrCameraView",
   "tags": [],
   "resourceType": "GMScript",
 }
